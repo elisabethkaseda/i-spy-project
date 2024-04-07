@@ -152,13 +152,17 @@ button {
     background-color: var(--squirrel);
 }
 
-.found {
+/*.found {
 	text-decoration-line: line-through;
 	-webkit-text-decoration-line: line-through;
 	text-decoration-color: var(--theblue);
 	-webkit-text-decoration-color: var(--theblue);
 	text-decoration-thickness: 5px;
 	-webkit-text-decoration-thickness: 5px;
+}*/
+
+.found {
+	color: var(--sand);
 }
 
 .winner {

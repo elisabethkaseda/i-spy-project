@@ -1,0 +1,540 @@
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Variables for use throughout */
+:root {
+    --theblue: #1B6484;
+    --thewhite: #F5F3E5;
+    --tree: #52280E;
+    --squirrel: #7B4E2D;
+    --sand: #EBCE9A;
+    --sunny: #d9b675;
+    --headings: 'Bremen', sans-serif;
+    --bodytext: 'Bubblegum Sans', sans-serif;
+}
+
+/* Massaged out the margins and viewport height values to ensure that only the picture overflow scrolls and the rest of the page stays static. Viewport heights and widths in media queries. Referenced somewhat from the Bootstrap documentation. */
+
+body {
+    background: url(../img/seagulls.png) repeat;
+    font-family: var(--bodytext);
+    font-size: 1.2rem;
+    color: var(--thewhite);
+}
+
+header {
+    background-color: var(--theblue);
+    text-align: center;
+    height: 130px;
+    z-index: 5;
+}
+
+.sidebar {
+    background-color: var(--thewhite);
+    color: var(--tree);
+    padding-left: 20px;
+    padding-top: 24px;
+    height: 450px;
+}
+
+.image {
+    overflow: scroll;
+    position:relative;
+    cursor: pointer;
+}
+
+footer {
+    background-color: var(--theblue);
+    text-align: center;
+    height: 40px;
+    z-index: 5;
+}
+
+@media screen and (min-width: 992px) {
+    header {
+        height: 135px;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+    }
+
+    .sidebar {
+        margin-top: 135px;
+        margin-bottom: 40px;
+        height: 550px;
+        min-height: 475px;
+    }
+
+    .image {
+        margin-top: 135px;
+        margin-bottom: 40px;
+        height: 550px;
+    }
+
+    footer {
+        height: 40px;
+        position: fixed;
+        bottom: 0px;
+        left: 0px;
+    }
+}
+
+@media screen and (min-width: 992px) and (min-height: 675px) {
+    header {
+        height: 20vh;
+    }
+
+    .sidebar {
+        margin-top: 20vh;
+        margin-bottom: 5vh;
+        height: 75vh;
+        min-height: 500px;
+    }
+
+    .image {
+        margin-top: 20vh;
+        margin-bottom: 5vh;
+        height: 75vh;
+    }
+
+    footer {
+        height: 5vh;
+    }
+}
+
+/* General Styling */
+
+h1 {
+    margin: 12px;
+    font-family: var(--headings);
+    font-size: 3rem;
+    color: var(--thewhite);
+}
+
+h2 {
+    font-family: var(--headings);
+    font-size: 2rem;
+}
+
+p {
+    margin: 2px;
+}
+
+button {
+    border: none;
+    border-radius: 5px;
+}
+
+#instructions {
+    padding-right: 5px;
+}
+
+.menu {
+    margin: 0 20px;
+    padding: 5px 20px;
+    border-radius: 25px;
+    font-family: var(--headings);
+    color: var(--tree);
+    background-color: var(--thewhite);
+}
+
+.highlight {
+    background-color: var(--sand);
+}
+
+.play {
+    margin: 0;
+    color: var(--thewhite);
+    background-color: var(--squirrel);
+}
+
+.found {
+    text-decoration: line-through var(--theblue) 5px;
+}
+
+.winner {
+    position: absolute;
+    top: 150px;
+    left: 300px;
+    z-index: 12;
+    border: solid white 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+.menu:hover {
+    background-color: var(--sunny);
+}
+
+.play:hover {
+    background-color: var(--tree);
+}
+
+/* Dog Park display and all buttons */
+
+#dog_overlay {
+    position:relative;
+    width: 1000px;
+    height:750px;
+    background-image: url('../img/dog-park.PNG');
+}
+
+#dog_overlay button{
+    position:absolute;
+    z-index: 10;
+    background-color: transparent;
+}
+
+.the-sun {
+	left: 440px;
+	top: 0px;
+	width: 154px;
+	height: 98px;
+}
+
+.an-escaped-balloon {
+	left: 83px;
+	top: 206px;
+	width: 35px;
+	height: 67px;
+}
+
+.an-angry-squirrel {
+	left: 116px;
+	top: 113px;
+	width: 67px;
+	height: 101px;
+}
+
+.an-airplane {
+	left: 256px;
+	top: 187px;
+	width: 105px;
+	height: 57px;
+}
+
+.a-flock-of-birds {
+	left: 555px;
+	top: 253px;
+	width: 49px;
+	height: 45px;
+}
+
+.an-abandoned-kite {
+	left: 677px;
+	top: 193px;
+	width: 37px;
+	height: 79px;
+}
+
+.a-brown-bird {
+	left: 821px;
+	top: 234px;
+	width: 31px;
+	height: 37px;
+}
+
+.a-seagull {
+	left: 866px;
+	top: 90px;
+	width: 68px;
+	height: 65px;
+}
+
+.an-embarrassed-dog {
+	left: 851px;
+	top: 329px;
+	width: 61px;
+	height: 76px;
+}
+
+.two-runners {
+	left: 511px;
+	top: 327px;
+	width: 134px;
+	height: 55px;
+}
+
+.a-balding-dog {
+	left: 61px;
+	top: 332px;
+	width: 115px;
+	height: 105px;
+}
+
+.an-escaped-dog {
+	left: 188px;
+	top: 276px;
+	width: 170px;
+	height: 159px;
+}
+
+.a-pretty-princess {
+	left: 582px;
+	top: 391px;
+	width: 98px;
+	height: 60px;
+}
+
+.a-nervous-wreck {
+	left: 332px;
+	top: 645px;
+	width: 108px;
+	height: 71px;
+}
+
+.a-muddy-pup {
+	left: 334px;
+	top: 441px;
+	width: 190px;
+	height: 92px;
+}
+
+.a-happy-star {
+	left: 763px;
+	top: 447px;
+	width: 79px;
+	height: 68px;
+}
+
+.some-clover {
+	left: 132px;
+	top: 558px;
+	width: 79px;
+	height: 75px;
+}
+
+.a-buzzy-friend {
+	left: 210px;
+	top: 493px;
+	width: 52px;
+	height: 45px;
+}
+
+.a-pair-of-butterflies {
+	left: 43px;
+	top: 452px;
+	width: 66px;
+	height: 92px;
+}
+
+.a-fancy-toy {
+	left: 244px;
+	top: 563px;
+	width: 117px;
+	height: 81px;
+}
+
+.a-football {
+	left: 955px;
+	top: 662px;
+	width: 45px;
+	height: 83px;
+}
+
+.a-basketball {
+	left: 700px;
+	top: 426px;
+	width: 48px;
+	height: 46px;
+}
+
+.a-donut {
+	left: 593px;
+	top: 468px;
+	width: 52px;
+	height: 44px;
+}
+
+.a-broken-friend {
+	left: 98px;
+	top: 432px;
+	width: 121px;
+	height: 42px;
+}
+
+.a-chewy-bone {
+	left: 22px;
+	top: 656px;
+	width: 133px;
+	height: 84px;
+}
+
+.a-long-rope {
+	left: 178px;
+	top: 654px;
+	width: 147px;
+	height: 96px;
+}
+
+.a-set-of-three-toys {
+	left: 783px;
+	top: 506px;
+	width: 112px;
+	height: 71px;
+}
+
+.a-tugging-rope {
+	left: 641px;
+	top: 555px;
+	width: 120px;
+	height: 66px;
+}
+
+/* Beach display and all buttons */
+
+#beach_overlay {
+    position:relative;
+    width: 1000px;
+    height:750px;
+    background-image: url('../img/beach.png');
+}
+
+#beach_overlay button{
+    position:absolute;
+    z-index: 10;
+    background-color: transparent;
+}
+
+.sunglasses-on-a-journey {
+	left: 212px;
+	top: 308px;
+	width: 78px;
+	height: 49px;
+}
+
+.goldfish {
+	left: 366px;
+	top: 183px;
+	width: 110px;
+	height: 88px;
+}
+
+.an-abandoned-surfboard {
+	left: 477px;
+	top: 70px;
+	width: 130px;
+	height: 85px;
+}
+
+.jellyfish {
+	left: 130px;
+	top: 34px;
+	width: 138px;
+	height: 159px;
+}
+
+.a-tiny-island {
+	left: 543px;
+	top: 327px;
+	width: 127px;
+	height: 127px;
+}
+
+.a-grinning-predator {
+	left: 645px;
+	top: 39px;
+	width: 252px;
+	height: 88px;
+}
+
+.two-flat-friends {
+	left: 744px;
+	top: 190px;
+	width: 207px;
+	height: 140px;
+}
+
+.a-sea-turtle {
+	left: 60px;
+	top: 348px;
+	width: 115px;
+	height: 100px;
+}
+
+.a-sad-cone {
+	left: 83px;
+	top: 565px;
+	width: 61px;
+	height: 65px;
+}
+
+.lost-green-treasure {
+	left: 230px;
+	top: 671px;
+	width: 74px;
+	height: 61px;
+}
+
+.a-pail {
+	left: 329px;
+	top: 442px;
+	width: 60px;
+	height: 59px;
+}
+
+.a-shovel {
+	left: 297px;
+	top: 490px;
+	width: 46px;
+	height: 53px;
+}
+
+.a-sandcastle {
+	left: 169px;
+	top: 472px;
+	width: 129px;
+	height: 123px;
+}
+
+.an-epic-duel {
+	left: 375px;
+	top: 508px;
+	width: 125px;
+	height: 171px;
+}
+
+.an-abandoned-picnic {
+	left: 489px;
+	top: 581px;
+	width: 119px;
+	height: 114px;
+}
+
+.a-yellow-polka-dot-bikini {
+	left: 675px;
+	top: 640px;
+	width: 101px;
+	height: 95px;
+}
+
+.two-feathers {
+	left: 823px;
+	top: 638px;
+	width: 78px;
+	height: 80px;
+}
+
+.seashells {
+	left: 852px;
+	top: 443px;
+	width: 108px;
+	height: 102px;
+}
+
+.a-beach-ball {
+	left: 735px;
+	top: 471px;
+	width: 68px;
+	height: 63px;
+}
+
+.found-item {
+    border: solid var(--thewhite) 3px;
+}

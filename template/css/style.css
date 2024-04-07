@@ -153,7 +153,12 @@ button {
 }
 
 .found {
-    text-decoration: line-through var(--theblue) 5px;
+	text-decoration-line: line-through;
+	-webkit-text-decoration-line: line-through;
+	text-decoration-color: var(--theblue);
+	-webkit-text-decoration-color: var(--theblue);
+	text-decoration-thickness: 5px;
+	-webkit-text-decoration-thickness: 5px;
 }
 
 .winner {
